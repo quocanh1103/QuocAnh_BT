@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./BTVN.js"></script>
+    <title>Document</title>
+</head>
+<style>
+    h1{
+        text-align: center;
+    }
+    #form{
+        border: 2px solid brown;
+        padding: 20px;
+    }
+    body{
+        width: 35vw;
+        margin: 10vh auto;
+    }
+    #row{
+        display: flex;
+        margin-bottom: 10px;
+    }
+    label{
+        width: 100px;
+    }
+    #inpadd, #inpdel{
+        width: 100px;
+        margin-left: 20px;
+    }
+    #form td{
+        border: 1px solid black;
+        width: 150px;
+    }
+    table{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    #format{
+        margin-top: 10px;
+    }
+</style>
+<body>
+    <div id="form">
+        <h1><b>BÀI TẬP ARRAY</b></h1>
+        <div id="row">
+            <label for="">Thêm vào: </label>
+            <input type="text"  id="add">
+            <input type="submit" id="inpadd" name="handleArray" value="Add" onClick='handleArray("add")'>
+        </div>
+        <div id="row">
+            <label for="">Xóa đi: </label>
+            <input type="text"  id="del">
+            <input type="submit" id="inpdel" name="handleArray" value="Delete" onclick='handleArray("del")'>
+        </div>
+        <table>
+            <thead>
+                <th class="index">Index</th>
+                <th class="value">Value</th>
+                <th class="created_at">Data create</th>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+        <input type="button" id="format" value="Format">
+    </div>
+</body>
+</html>

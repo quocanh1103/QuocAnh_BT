@@ -1,0 +1,83 @@
+body{
+    border: 2px solid gray;
+    
+    margin: 10px 30px;
+}
+
+.header{
+    display: flex;
+}
+img{
+    padding-top: 10px;
+    padding-left: 30px;
+}
+.first{
+    padding-left: 80px;
+}
+h1{
+    color: rgb(207, 207, 48);
+    text-shadow: 2px 2px;
+}
+.first p {
+    color: rgb(17, 86, 17);
+}
+#menu ul{
+    display: flex;
+    list-style-type: none;
+    border-top: 3px solid orange;
+    border-bottom: 3px solid orange;
+    margin: 20px;
+}
+#menu li{
+    padding-right: 2rem;
+    border-right: 3px solid #000;
+    margin-left: 10px;
+}
+.main{
+    display: flex;
+    border-bottom: 3px solid orange;
+    margin: 10px;
+}
+.main .left{
+    flex-grow: 2;
+}
+.main .right{
+    flex-grow: 1;
+}
+.left{
+    margin: 10px;
+    border-right: 3px solid orange;
+    padding-left: 20px;
+}
+
+.right{
+    padding-left: 1rem;
+}
+fieldset{
+    width: 90%;
+    margin: 2px;
+}
+.f1 div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    gap: 10px;
+    margin: 5px;
+   
+}
+.f1 div label{
+    text-align: right;
+}
+.s3{
+    text-align: center;
+}
+.s3 input{
+    width: 30%;
+    margin: 5px;
+}
+
+.footer{
+    text-align: right;
+    padding-right: 10px;
+    margin-bottom: 15px;
+}
+

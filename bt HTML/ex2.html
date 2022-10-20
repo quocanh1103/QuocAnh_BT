@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tạo menu</title>
+    <style>
+        #nav_list ul li {
+            float: left;
+            background-color: brown;
+            width: 130px;
+            text-align: center;
+            margin-left: 50px;
+        }
+
+        a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        #nav_list ul ul {
+            display: none;
+        }
+
+        #nav_list :hover>ul {
+            display: block;
+
+        }
+    </style>
+</head>
+
+<body>
+    <nav id="nav_list">
+        <ul style="list-style: none;">
+            <li><a href="tui">tui</a></li>
+            <li><a href="tuấn">tuấn</a>
+                <ul style="list-style: none;">
+                    <li><a href="tuấn1">tuấn1</a></li>
+                    <li><a href="tuấn2">tuấn2</a></li>
+                    <li><a href="tuấn3">tuấn3</a>
+                        <ul style="list-style: none;">
+                            <li><a href="tuấn4">tuấn4</a></li>
+                            <li><a href="tuấn5">tuấn5</a></li>
+                            <li><a href="tuấn6">tuấn6</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="bảo">bảo</a>
+                <ul style="list-style: none;">
+                    <li><a href="tuấn1">bảo1</a></li>
+                    <li><a href="tuấn2">bảo2</a></li>
+                    <li><a href="tuấn3">bảo3</a>
+                        <ul style="list-style: none;">
+                            <li><a href="tuấn4">bảo4</a></li>
+                            <li><a href="tuấn5">bảo5</a></li>
+                            <li><a href="tuấn6">bảo6</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+
+</html>

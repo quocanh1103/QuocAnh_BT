@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #myinput {
+        width: 600px;
+        height: 300px;
+        border: 1px solid black;
+        box-sizing: border-box;
+        margin: 0 auto;
+        padding-left: 20px;
+
+    }
+
+    label {
+        float: flex;
+        text-align: left;
+        width: 100px;
+    }
+
+    #Register,
+    #reset {
+        width: 250px;
+    }
+</style>
+
+<body>
+    <form id="myinput">
+        <h1>Register for an Account</h1>
+        <div>
+            <label for="">E-mail:</label>
+            <input type="text" id="email">
+        </div>
+        <div>
+            <label for="">Mobile Phone:</label>
+            <input type="number" id="phone">
+        </div>
+        <div>
+            <label for="">Country:</label>
+            <select name="" id="country">
+                <option value="VN">VN</option>
+                <option value="US">US</option>
+                <option value="Russia">Russia</option>
+            </select>
+        </div>
+        <div>
+            <label for="">Contact by me:</label>
+            <input type="radio" name="text" id="text">text
+            <input type="radio" name="text" id="Email">Email
+            <input type="radio" name="text" id="none">Dont contact me
+        </div>
+        <div>
+            <label for="">Term of service:</label>
+            <input type="checkbox" name="" id="term">I accept
+        </div>
+        <input type="button" id="Register" value="Register"></input>
+        <input type="reset" id="reset" value="Reset"></input>    
+    </form>
+    <div>
+        <h2>Please review your entries and complete all required fields</h2>
+        <p>Email: <span id="mail"></span></p>
+        <p>Phone: <span id="phone1"></span></p>
+        <p>Country: <span id="country1"></span></p>
+        <p>Contact: <span id="contact"></span></p>
+        <p>Terms: <span id="terms"></span></p>
+    </div>
+</body>
+<script>
+    document.getElementById('Register').onclick = function (e) {
+        e.preventDefault();
+        var task = document.getElementById('email').value;
+        document.getElementById('mail').innerText = task;
+        var task1 = document.getElementById('phone').value;
+        document.getElementById('phone1').innerText = task1;
+        var task2 = document.getElementById('country').value;
+        document.getElementById('country1').innerText = task2;
+        if(document.getElementById('text').checked){
+            document.getElementById('contact').innerText='text';
+        }
+        if (document.getElementById('Email').checked) {
+            document.getElementById('contact').innerText='Email';
+        }
+        if (document.getElementById('none').checked) {
+            document.getElementById('contact').innerText='none';
+        }
+        if(document.getElementById('term').checked){
+            document.getElementById('terms').innerText='Đồng ý';
+        }else{
+            document.getElementById('terms').innerText='Không đồng ý'
+        }
+    }
+    for(var i =1; i <=50;i++){
+        if(i%9==0)
+        // continue;
+        console.log(i);
+    } 
+    
+</script>
+
+</html>

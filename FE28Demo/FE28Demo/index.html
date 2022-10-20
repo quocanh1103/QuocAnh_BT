@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3 {
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+        }
+        .hide {
+            display: none;
+        }
+        body {
+            width: 30vw;
+            margin: 10vh auto;
+        }
+
+        .container h3 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .container .row_item {
+            display: flex;
+            margin-bottom: 8px;
+        }
+
+        .container .row_item label {
+            width: 150px;
+        }
+        .container .row_item button {
+            margin-left: 10px;
+        }
+        #tblData {
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        #tblData thead th, #tblData tbody td {
+            border: 1px solid black;
+            width: 150px;
+            text-align: center;
+        }
+        .container .area_format {
+            margin-top: 20px;
+        }
+        .container .area_format button {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+     <div class="container">
+        <div class="header_form">
+          <h3>Bài tập Array</h3>
+          <div class="row_item">
+              <label for="">Thêm vào : </label>
+              <input type="text">
+              <button type="button" id="btnAdd">Add</button>
+          </div>
+          <div class="row_item">
+            <label for="">Xóa đi : </label>
+            <input type="number" min="0">
+            <button type="button" id="btnDelete">Delete</button>
+        </div>
+        </div>
+
+        <table id="tblData">
+            <thead>
+                <tr>
+                    <th colspan="3">Data array :</th>
+                </tr>
+                <tr>
+                    <th>Index</th>
+                    <th>Value</th>
+                    <th>Date Create</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+        <div class="area_format">
+            <button type="button" id="btnFormat">Format</button>
+            <code id="areaData"></code>
+        </div>
+     </div>
+</body>
+<script src="./js/main.js"></script>
+
+</html>

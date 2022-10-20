@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h3 {
+            margin: 0;
+            padding: 0;
+            cursor: pointer;
+        }
+        .hide {
+            display: none;
+        }
+        body {
+            width: 30vw;
+            margin: 10vh auto;
+        }
+        #form {
+            border: 2px solid brown;
+            padding: 20px;
+        }
+        #form form .row_item {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        #form form .row_item label {
+            width: 150px;
+        }
+        #form table {
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        #form table th, #form table td {
+            border: 1px solid black;
+            width: 150px;
+        } 
+    </style>
+</head>
+<body>
+     <div id="form">
+          <form action="">
+              <div class="row_item">
+                <label for="">E-mail : </label>
+                <input type="text" name="email">
+              </div>
+              <div class="row_item">
+                <label for="">Phone : </label>
+                <input type="text" name="phone">
+              </div>
+              <div class="row_item">
+                <label for="">Country : </label>
+                <select>
+                    <option value=""></option>
+                    <option value="1">Viet Nam</option>
+                    <option value="2">My</option>
+                    <option value="3">Anh</option>
+                </select>
+              </div>
+              <div class="row_item">
+                <label for="">Contact me by</label>
+                <div>
+                    <input type="radio" name="radioContact" value="Email">
+                    <input type="radio" name="radioContact" value="Phone">
+                    <input type="radio" name="radioContact" value="None">
+                </div>
+              </div>
+              <div class="row_item">
+                <label for="">Term of service : </label>
+                <input type="checkbox" name="termOfService"><span>I accept this rule</span>
+              </div>
+              <div>
+                <input type="button" value="Register">
+                <input type="reset" value="Reset">
+              </div>
+          </form>
+          <table id="tbl__infor">
+              <thead>
+                  <th>STT</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Country</th>
+                  <th>Contact</th>
+                  <th>Term</th>
+              </thead>
+              <tbody>
+                  
+              </tbody>
+          </table>
+     </div>
+</body>
+<script src="./js/main.js"></script>
+
+</html>

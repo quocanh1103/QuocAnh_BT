@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .hiding {
+        display: none;
+    }
+    h1{
+        cursor: pointer;
+    }
+    
+</style>
+<body>
+    <div>
+        <h1 id="click">How to get/set img tag src attribute</h1>
+        <p id="hiding">var imageElement = $(“iamge”);
+            alert(imageElement.getAttribute(src));
+            iamgeElement.setAttribute(src,”lures.jpg”)</p>
+    </div>
+    <div>
+        <h1 id="click1">Or you can code</h1>
+        <p id="hiding">alert(imageElement. Src);
+            iamgeElement.src = ”lures.jpg”;</p>
+    </div>
+    <div>
+        <h1 id="click2">How to get id attribute of the first element in an array</h1>
+        <p id="hiding">links = document.getElementsByTagName(“a”);
+            var firstLinkId = links[0].id;</p>
+    </div>
+</body>
+
+<script>
+    document.getElementById('click').onclick = function () {
+        document.getElementById('click1').nextElementSibling.setAttribute('class', 'hiding')
+        document.getElementById('click2').nextElementSibling.setAttribute('class', 'hiding')
+        if (!document.getElementById('click').nextElementSibling.hasAttribute('class')) {
+            (document.getElementById('click').nextElementSibling.setAttribute('class', 'hiding'));
+        } else {
+            document.getElementById('click').nextElementSibling.removeAttribute('class');
+        }
+
+    }
+    document.getElementById('click1').onclick = function () {
+        document.getElementById('click').nextElementSibling.setAttribute('class', 'hiding')
+        document.getElementById('click2').nextElementSibling.setAttribute('class', 'hiding')
+        if (!document.getElementById('click1').nextElementSibling.hasAttribute('class')) {
+            (document.getElementById('click1').nextElementSibling.setAttribute('class', 'hiding'));
+        }
+        else {
+            document.getElementById('click1').nextElementSibling.removeAttribute('class');
+        }
+    }
+    document.getElementById('click2').onclick = function () {
+        document.getElementById('click1').nextElementSibling.setAttribute('class', 'hiding')
+        document.getElementById('click').nextElementSibling.setAttribute('class', 'hiding')
+        if (!document.getElementById('click2').nextElementSibling.hasAttribute('class')) {
+            (document.getElementById('click2').nextElementSibling.setAttribute('class', 'hiding'));
+        } else {
+            document.getElementById('click2').nextElementSibling.removeAttribute('class');
+        }
+    }
+
+</script>
+
+</html>

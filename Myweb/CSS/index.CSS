@@ -1,0 +1,57 @@
+.header {
+    display: flex;
+    background-color: rgb(179, 169, 169);
+}
+
+#menu ul {
+    display: flex;
+
+}
+
+#menu ul li {
+    list-style-type: none;
+    padding: 30px;
+
+}
+
+#menu ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    padding: 40px;
+}
+
+.header img {
+    width: 100px;
+    height: 100px;
+    padding-right: 400px;
+    padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 10px;
+}
+
+a:hover {
+    background: url(../images/bg-nav-selected.png);
+}
+.main{
+    display: flex;
+    padding-top: 30px;
+    
+}
+.left{
+    flex: 1;
+    padding-left: 30px;
+}
+.right{
+    flex: 1;
+    padding-right: 30px;
+}
+.right h2, .right p{
+    text-align: right;
+}
+.footer{
+    height: 100px;
+    color: aliceblue;
+    background-image: url(../images/bg-nav-selected.png);
+}
+
+

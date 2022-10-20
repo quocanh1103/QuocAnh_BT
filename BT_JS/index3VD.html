@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <title>Document</title>
+
+</head>
+<style>
+    .container1 {
+        border: 1px solid black;
+        margin: 10px 10px;
+        width: 20%;
+        padding-bottom: 5px;
+    }
+
+    .container {
+        border: 1px solid black;
+        margin: 10px 10px;
+        width: 30%;
+    }
+
+    table {
+        border-collapse: collapse;
+    }
+
+    table thead th {
+        border: 1px solid black;
+        width: 80px;
+    }
+
+    table tbody td {
+        border: 1px solid black;
+        width: 80px;
+    }
+</style>
+
+<body>
+    <div class="left">
+        <form class="container">
+            <h1>QUẢN LÝ SINH VIÊN</h1>
+            <div id="row">
+                <label for="">Name</label>
+                <input type="text" name="namesearch" id="name">
+            </div>
+            <div id="row">
+                <label for="">Age</label>
+                <input type="text" name="" id="age">
+            </div>
+            <div id="row">
+                <span id="radiogender">Gender: </span>
+                <input type="radio" name="gender" value="Nam"> nam
+                <input type="radio" name="gender" value="Nữ"> nữ
+            </div>
+            <div id="row">
+                <label for="">class : </label>
+                <select name="" id="">
+                    <option value="FE28">
+                        FE28
+                    </option>
+                    <option value="FE29">
+                        FE29
+                    </option>
+                    <option value="FE30">
+                        FE30
+                    </option>
+                </select>
+            </div>
+            <div id="row_btn">
+                <button id="add">ADD</button>
+                <button type="reset" id="clear">CLEAR</button>
+            </div>
+        </form>
+        <div>
+            <table id="info">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Class</th>
+                    </tr>
+                </thead>
+                <tbody id="bodylist">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="right">
+        <div class="container1">
+            <p>Tìm kiếm:</p>
+            <label for="">Name: </label>
+            <input type="text" name="" id="">
+        </div>
+        <div>
+            <table id="infoDetail">
+                <thead>
+                    <tr>
+                        <th>STT</th>
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Gender</th>
+                        <th>Class</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<script>
+    var Sinhvien = function (name, age, className, index, gender) {
+        this.name = name;
+        this.age = age;
+        this.className = className;
+        this.index = index;
+        this.gender = gender;
+    }
+    var arrSV = [];
+    $(document).ready(function () {
+        $('#add').click(function (e) {
+            e.preventDefault();
+            let txtName = $('#name').val();
+            let txtAge = $('#age').val();
+            let index = $('#info tbody tr').length;
+            let txtClass = $('select').val();
+            let txtGender = $('input[name="gender"]:checked').val();
+
+            var SinhVien = new Sinhvien(txtName, txtAge, txtClass, index, txtGender);
+            arrSV.push(SinhVien);
+
+            renderTable();
+            localStorage.setItem('JSON',arrSV);
+        })
+        $('#left').on('click', '#clear', function () {
+            $(this).remove();
+        })
+        function renderTable() {
+            var html = '';
+            arrSV.forEach(function (sinhVien) {
+                html += ` <tr>
+                        <td>${sinhVien.index}</td>
+                        <td>${sinhVien.name}</td>
+                        <td>${sinhVien.age}</td>
+                        <td>${sinhVien.gender}</td>
+                        <td>${sinhVien.className}</td>
+                    </tr>`
+            })
+            $('#bodylist').html(html);
+        };
+        $('input[name="namesearch"]').bind('keyup', function (e) {
+            if (e.key == "Enter") {
+                let targetObj = arrSV.find(function (item) {
+                    return item.name == e.currentTarget.value;
+                });
+                renderTable([targetObj],'#infoDetail',2);
+            };
+        });
+    });
+
+
+
+
+// các event : 
+//Select 
+// document.querySelector('textarea').addEventListener('select',function(event){
+//     console.log(event);
+// })
+// // submit
+// document.querySelector('#formDemo').addEventListener('submit', function(event){
+//     alert('form submit');
+// })
+// //change
+
+// //dblclick
+// let dem = 0;
+// document.querySelector('#btnclick').addEventListener('dblclick', function(event){
+//     ++dem;
+//     console.log("event dblclick" + dem);
+//     // this.disabled = false;          fixbug
+// });
+
+
+
+// //set giờ
+// let minute = 10;
+// let second = 60;
+// let democlock = setInterval(() => {
+//     --second;
+//     document.querySelector('#second').innerHTML=second;
+//     if(second== 0){
+//         second = 60;
+//         --minute;
+//         document.querySelector('#minute').innerHTML=minute;
+//     }
+//     if(democlock == 0){
+//         document.querySelector('#second').innerHTML=00;
+//         document.querySelector('#minute').innerHTML==00;
+//     }
+// },10)
+
+
+    // var objdemo = {
+    //     name: 'Bao',
+    //     age: 21,
+    //     address: 'Da Nang'
+    // };
+    // var arrkey = Object.keys(objdemo)
+    // console.log(arrkey);
+// giảm dần
+    // var arr = [0,3,5,1,4,9];
+    // function decrease(){
+    //     arr.sort(function(a,b){
+    //         return b-a
+    //     });
+    //     arr.forEach(function(arr){
+    //         console.log(arr)
+    //     })
+    // };
+    // decrease();
+
+
+
+
+// var Sinhvien = function(age, name){
+//     this.ageObj = age;
+//     this.nameObj = name;
+// }
+// Sinhvien.prototype.getName = function(){
+//     return this.nameObj;
+// }
+// Sinhvien.prototype.getAge = function(){
+//     return this.nameObj + '__' + this.ageObj;
+// }
+
+// var Bao = new Sinhvien(21, 'Bao beo');
+// var Tuan = new Sinhvien(22, 'Tuan ngu');
+// var Hy = new Sinhvien(23, 'Hy dan');
+// console.log(Bao.getName());
+// console.log(Tuan.getAge());
+// console.log(Hy);
+</script>
+
+</html>

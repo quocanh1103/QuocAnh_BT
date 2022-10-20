@@ -1,0 +1,44 @@
+.header {
+    display: flex;
+    background-color: rgb(179, 169, 169);
+}
+
+#menu ul {
+    display: flex;
+
+}
+
+#menu ul li {
+    list-style-type: none;
+    padding: 30px;
+
+}
+
+#menu ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    padding: 40px;
+}
+
+.header img {
+    width: 100px;
+    height: 100px;
+    padding-right: 400px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+a:hover {
+    background: url(../images/bg-nav-selected.png);
+}
+
+
+.footer{
+    height: 100px;
+    color: aliceblue;
+    background-image: url(../images/bg-nav-selected.png);
+
+}
+.main{
+    padding-bottom: 20px;
+}

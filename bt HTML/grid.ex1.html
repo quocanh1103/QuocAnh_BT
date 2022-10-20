@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            width: 50vw;
+            margin: 10vh auto;
+            background-color: rgba(0, 255, 204, 0.242);
+        }
+        .container{
+
+            display: grid;
+            grid-template-columns: 100px 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px 100px 100px 100px;
+            grid-gap: 5px;
+            background-color: transparent;
+            justify-content: center;
+            grid-template-areas: 
+            "s1 s1 s1 s1"
+            "s2 s2 s2 s2"
+            "s3 s3 s3 s3"
+            "s4 s4 s5 s6"
+            "s0 s0 s7 s8"
+            "s9 s9 s9 s9";
+        }
+        .container div{
+            
+            background-color: white;
+        }
+        #s1 {
+            grid-area: s1;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-gap: 25%;
+            background-color: transparent;
+        }
+        #s2 {
+            grid-area: s2;
+        }
+        #s3 {
+            grid-area: s3;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background-color: transparent;
+        }
+        #s4 {
+            grid-area: s4;
+        }
+        #s5 {
+            grid-area: s5;
+        }
+        #s6 {
+            grid-area: s6;
+        }
+        #s7 {
+            grid-area: s7;
+        }
+        #s8 {
+            grid-area: s8;
+        }
+        #s9 {
+            grid-area: s9;
+        }
+        #s0{
+            grid-area: s0;
+        }
+        
+        /* Style #header */
+        #ss1{
+            text-align: center;
+            
+        }
+        
+        #ss2{
+            grid-template-columns: 1fr 1fr;
+            display: grid;
+        }
+
+        .s3-item{
+            width: 50%;
+        }
+        
+        #s9{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="s1">
+            <div id="ss1">logo</div>
+            <div id="ss2">
+                <div>item1</div>
+                <div>item2</div>
+            </div>
+        </div>
+        <div id="s2">abcdefghiklmn</div>
+        <div id="s3">
+            <div class="s3-item" id="ss3">title</div>
+            <div class="s3-item" id="ss4">title</div>
+        </div>
+        <div id="s4">blog post 1</div>
+        <div id="s5">item 1</div>
+        <div id="s6">item 2</div>
+        <div id="s7">item 3</div>
+        <div id="s8">item 4</div>
+        <div id="s0">blog post 2</div>
+        <div id="s9">copyright notice</div>
+    </div>
+</body>

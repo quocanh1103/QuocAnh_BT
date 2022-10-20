@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./index4.js"></script>
+    <title>Document</title>
+</head>
+<style>
+.container{
+    border: 1px solid black;
+    width: 35vw;
+    margin: 20px auto;
+    height: 50vh;
+}
+.container #form{
+    display: flex;
+}
+.container #form label {
+    width: 150px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+.container #form input{
+    margin-bottom: 10px;
+    width: 200px;
+}
+.container h3{
+    text-align: center;
+}
+.container button{
+    width: 150px;
+    margin-left: 90px;
+    margin-top: 5px;
+}
+#tbData{
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+#tbData thead th, #tbData tbody td{
+    border: 1px solid black;
+    width: 150px;
+}
+</style>
+<body>
+    <div class="container">
+        <div>
+            <h3>THÔNG TIN SINH VIÊN</h3>
+            <div id="form">
+                <label for="">First name: </label>
+                <input type="text" name="" id="">
+            </div>
+            <div id="form">
+                <label for="">Last name</label>
+                <input type="text" name="" id="">
+            </div>
+            <div id="form">
+                <label for="">Address</label>
+                <input type="text" name="" id="">
+            </div>
+            <div id="form">
+                <label for="">Age</label>
+                <input type="text" name="" id="">
+            </div>
+                <button>ADD</button>
+                <button>Clear</button>
+        </div>
+        <table id="tbData">
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>FullName</th>
+                    <th>Address</th>
+                    <th>Age</th>
+                </tr>
+            </thead>
+            <tbody>
+    
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

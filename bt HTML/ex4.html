@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            border: 2px solid red;
+            box-sizing: border-box;
+        }
+
+        header {
+            height: 110px;
+            background: radial-gradient(circle, rgba(255, 255, 255) 0%, rgba(255, 205, 0, 1) 100%);
+            padding-left: 20px;
+        }
+
+        header img {
+            padding-top: 10px;
+            float: left;
+            padding-left: 10px;
+            border-radius: 100%;
+            display: block;
+            width: 200px;
+            height: 200px;
+            margin: auto auto;
+
+        }
+
+        .s {
+            float: left;
+            text-align: center;
+        }
+
+        #nav_list .s1 {
+            background-color: brown;
+            display: flex;
+            justify-content: space-evenly;
+            list-style-type: none;
+            
+        }
+        #nav_list  li{
+            flex-direction: row;
+            margin: 20px;
+           
+        }
+        #nav_list .s2 {
+            position: absolute;
+           list-style-type: none;
+           padding-right: 20px;
+        }
+        footer a {
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        #nav_list ul ul {
+            display: none;
+        }
+
+        #nav_list :hover>ul {
+            display: block;
+        }
+
+        .s1 {
+            border-top: 2px solid brown;
+            border-bottom: 2px solid brown;
+           
+            position: relative;
+            
+        }
+
+        main {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        h3 {
+            color: brown;
+        }
+
+        footer {
+            border: 5px solid brown;
+            background-color: brown;
+            text-align: center;
+            color: aliceblue;
+        }  
+        #nav_list ul li a{
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        #nav_list ul{
+            min-height: 70px;
+            background-color: brown;
+            margin-top: 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="https://st.quantrimang.com/photos/image/2021/08/23/hello-kitty-1.jpg" width="100" height="100"
+            alt="hello-kitty-1">
+        <div class="s">
+            <h2>San joaquin Valley Town Hall</h2>
+            <h3>Celebrating our 75<sup>th</sup> Year </h3>
+        </div>
+    </header>
+    <nav id="nav_list">
+        <ul class="s1">
+            <li><a href="">Home</a></li>
+            <li><a href="">Speakes</a></li>
+            <li><a href="">luncheons</a></li>
+            <li><a href="">tickets</a></li>
+            <li><a href="">About Us</a>
+                <ul class="s2">
+                    <li><a href="">Our history</a></li>
+                    <li><a href="">Board of Directors</a></li>
+                    <li><a href="">Past speakers</a></li>
+                    <li><a href="">Contact information</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <h3>Our mission</h3>
+        <p>San Joaquin Valley Town Hall is a non-profit organization that is run by an all-volunteer board of
+            directors. Our mission is to bring nationally and internationally renowned, thought-provoking speakers
+            who inform, educate, and entertain our audiencel As one or our members told us: <br>
+            "Each year I give a ticket package to each of our family members. I think of it as the gift of knowledge
+            and that is priceless"</p>
+        <h1>speaker of the month</h1>
+        <div class="s1">
+            <h3>Fossil Threads in the web of lite</h3>
+            <h4>February
+                scott sampson
+            </h4>
+            <p>What's 75 million years old and brand spanking new A teenage Utahceratops! Come to the Jeffrey Toobin
+                What's 75 man years Saroyan, armed with your best dinosaur roar, when Scott Sampson, Research
+                Curator at the Utah Museum of Natural History, steps to the podium Sampson's research has focused on
+                the ecology and evolution of late Cretaceous dinosaurs and he has conducted fieldwork in a number of
+                countries in Africa.</p>
+            <img src="https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/bltf7695f98c1f01bd9/62cbfb91c9db8842cf76cb5b/GHP_MESSI-BOOTS_16-9.jpg"
+                 alt="messi">
+            <a href="">Read more</a> <a href="">Or play video</a>
+        </div>
+        <h3>Our ticket packages</h3>
+        <ul style="list-style-type: none;">
+            <li>season package: $95</li>
+            <li>patron package: $200</li>
+            <li>single speaker: $25</li>
+        </ul>
+    </main>
+    <footer>&copy;,San joaquin Valley Town Hall,Frenso,CA 93755</footer>
+</body>
+
+</html>

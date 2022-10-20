@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-image: url("https://spectrum.ieee.org/media-library/earth-in-space.jpg?id=27044580&width=980");
+    }
+    #Some{
+        margin: 500px auto;
+        border: 1px solid wheat;
+        width: 300px;
+        text-align: center;
+        height: 100px;
+    }
+    p{
+        color: white;
+    }
+    
+</style>
+<body>
+    <div id="Some">
+        <p><span>Nhập tên: </span></p>
+        <input type="text" id="name">
+        <button id="btn">Kiểm Tra</button>
+    </div>
+</body>
+<script>
+    document.getElementById('btn').onclick= function(){
+        var task = document.getElementById('name').value;
+        if(task == 'Bảo'){
+            alert('ĐÃ ĐĂNG XUẤT');
+        }
+        if(task == 'Huy'){
+            alert('ĐÃ ĐĂNG XUẤT');
+        }
+        if(task == 'Hy'){
+            alert('ĐÃ ĐĂNG XUẤT');
+        }
+        if(task == 'Phong'){
+            alert('ĐÃ ĐĂNG XUẤT');
+        }
+        if(task == 'Tuấn'){
+            alert('ĐÃ ĐĂNG XUẤT');
+        }
+        if(task == ''){
+            return;
+        }
+        else{
+            alert('VẪN CÒN SỐNG');
+        }
+    }
+    onload = function(){
+        document.getElementById('name').focus();
+    }
+</script>
+</html>

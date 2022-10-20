@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="./main.js"></script> -->
+    
+    <title>Document</title>
+</head>
+<body>
+    <!-- vd1 -->
+    <!-- <div>
+        <input type="number" id="txtname">
+        <p>thông tin đã nhập : <span id="result"></span></p>
+        <button id="Submit">Submit</button>
+    </div> -->
+    <div>
+        <label>Task : </label>
+        <input type="text" id="task"> <br> <br>
+        <button id="save">Save</button>
+        <p>Date: <span id="Result"></span></p>
+        <button id="Delete">Delete</button>
+    </div>
+</body>
+<script>
+    // document.getElementById('Submit').onclick= function(){
+    //     // vd1:
+    //     // var txtname = document.getElementById('txtname').value;
+    //     // document.querySelector('div span').innerHTML=txtname;
+    //     // vd2:
+    //     // var month = ('jan','Feb','Mar','April','May','june','july','aug','sep','Oct','Nov','Dec');
+    //     // var day = new  Date();
+    //     // document.querySelector('div span').innerHTML= 'tháng '+ month[day.getMonth()];
+    // }
+
+        document.getElementById('save').onclick= function(){
+            var task = document.getElementById('task').value;
+            document.getElementById('Result').innerText=task;
+        }
+        document.getElementById('Delete').onclick=function(){
+        var Delete = confirm('Ban co muon xoa');
+        if(Delete){
+            document.getElementById('Result').innerText='';
+        }
+    }
+</script>
+</html>
